@@ -4,7 +4,7 @@ A local AI studio with conversations, project memory, a file editor, and optiona
 
 ## Download
 
-[Download the Windows preview](https://github.com/Tboy450/ghost-ai-downloads/releases/tag/v0.3.0)
+[Download the Windows preview](https://github.com/Tboy450/ghost-ai-downloads/releases/tag/v0.3.1)
 
 Download the ZIP and its `.sha256` file. This is an **unsigned preview ZIP with a PowerShell installer**, not a signed EXE/MSIX.
 
@@ -14,6 +14,8 @@ Download the ZIP and its `.sha256` file. This is an **unsigned preview ZIP with 
 4. Open the **Ghost** desktop shortcut or **Start Ghost.cmd**. Ghost opens at `http://127.0.0.1:4317`.
 
 Task mode is the default. **Debate** enables argument analysis. **Think** requests a separate, expandable thinking stream from a compatible model. The profile panel identifies the running model, application and memory paths. Model replies may still be mistaken; the panel's runtime facts identify the actual installation.
+
+**Edit file with Ghost** prepares a change to one selected file. Review its diff, then explicitly approve the write or reject it. Existing-file edits keep backups and refuse stale originals; new files require an existing parent. Limit: UTF-8, 16 KB, 400 lines. This tool does not run builds/tests or change the model's weights.
 
 After setup, local inference and memory do not need internet. Cloud providers, public chat sites and GitHub workflows do. Git features also require Git and a project repository. A listed provider is not proof that it is connected.
 
