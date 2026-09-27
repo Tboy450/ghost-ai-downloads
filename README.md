@@ -4,7 +4,7 @@ A local AI studio with conversations, project memory, a file editor, and optiona
 
 ## Download
 
-[Download the Windows preview](https://github.com/Tboy450/ghost-ai-downloads/releases/tag/v0.3.1)
+[Download the Windows preview](https://github.com/Tboy450/ghost-ai-downloads/releases/tag/v0.3.2)
 
 Download the ZIP and its `.sha256` file. This is an **unsigned preview ZIP with a PowerShell installer**, not a signed EXE/MSIX.
 
