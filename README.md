@@ -4,7 +4,7 @@ A local AI studio with conversations, cooperating project-memory layers, file ed
 
 ## Download
 
-[Download Ghost 0.3.5 for Windows](https://github.com/Tboy450/ghost-ai-downloads/releases/tag/v0.3.5)
+[Download Ghost 0.3.6 for Windows](https://github.com/Tboy450/ghost-ai-downloads/releases/tag/v0.3.6)
 
 Download the ZIP and its `.sha256` file. This remains an **unsigned preview ZIP with a PowerShell installer**, not a signed EXE/MSIX.
 
@@ -18,9 +18,9 @@ Download the ZIP and its `.sha256` file. This remains an **unsigned preview ZIP 
 
 Seven chat tools: current time, list/read/search project files, propose edits, propose new files, and list installed engines. File traversal and returned reads are bounded and say when results are incomplete. The dispatcher refuses tools outside the current offered set. Review a proposed diff and approve its exact write; applied edits keep checkpoints and offer **Undo** without overwriting later work. **Engines** detects installed software and records project enablement; this is separate from executing commands. Command execution remains pending and is not in this release.
 
-Explicit English search → read requests now track actual tool evidence. With a clear matching file, Ghost can complete one skipped bounded read within the existing tool allowance and feed that content into the answer. It withholds premature claims and reports unfinished work when a read is unavailable, ambiguous, partial or stopped. General multi-action planning and durable task resumption remain pending.
+Explicit English search → read requests now track actual tool evidence. With a clear matching file, Ghost can complete one skipped bounded read within the existing tool allowance and feed that content into the answer. It withholds premature claims and reports unfinished work when a read is unavailable, ambiguous, partial or stopped. Saved progress now survives reload/restart/project switches. Explicit Resume can finish an applicable unfinished read; Cancel stops the task. Authenticated owner/session records and fresh file/search checks prevent stale or foreign recovery, and applied/undone/cancelled work never replays. General multi-action planning remains pending.
 
-Task mode is the default. **Debate** enables argument analysis. **Think** requests separate reasoning; when the model returns a trace it is expandable. Missing returned reasoning does not prove a lack of internal computation. The profile panel identifies actual model/application/memory facts; generated replies may still misdescribe them.
+Task mode is the default. **Debate** enables argument analysis. **Think** requests separate reasoning; when the model returns a trace it is expandable. Missing returned reasoning does not prove a lack of internal computation. The profile distinguishes weights, unavailable original training corpus, selected documents, ready memory and archive. Tool registration/checks/offers/calls/verified outcomes differ from installed engines. Development direction comes from checked source criteria or a dated packaged snapshot. Ghost has its own application identity and project memory; the unchanged Qwen model generates replies. Generated replies can still misdescribe facts.
 
 The separate **Edit file with Ghost** dialog prepares a change to one selected file. It requires approval, supports new files inside an existing parent, and accepts UTF-8 up to 16 KB and 400 lines. Neither editing workflow retrains model weights. Browser control, connected command tools, hosted GitHub account integration, training ratings and admin counters remain pending. A listed provider or saved key is not proof of a functional connection.
 
@@ -28,7 +28,7 @@ After setup, local inference and memory do not need internet. Optional online se
 
 ## Updating
 
-See `docs/INSTALL.md` in the ZIP. Close the Ghost server before installing the new ZIP into the same installation folder. Program files are backed up under `.install-backups`; `.ghost` data, `.runtime` models and external project folders are preserved. Existing models normally need no redownload. Closing the browser alone does not stop background processes. The package check verifies fresh install and reinstall using fixture data; fresh-machine setup, interrupted upgrades and uninstall remain uncertified. Hardware performance varies.
+See `docs/INSTALL.md` in the ZIP. Close the Ghost server before installing the new ZIP into the same installation folder. Program files are backed up under `.install-backups`; `.ghost` data, `.runtime` models and external project folders are preserved. Existing models normally need no redownload. Closing the browser alone does not stop background processes. 439 source tests passed; live grounding used a reviewed 39-case sweep and 21 final affected repeats, plus a real seven-tool Eco short chat. Actual ZIP checks verify signed task/facts modules and fresh install/reinstall using fixture data; fresh-machine setup, interrupted upgrades and uninstall remain uncertified. Hardware performance varies.
 
 Source pushes and ZIP releases do not automatically update installed apps or the shared guest service. The shared chat launch page and endpoint are maintained separately from downloads.
 
