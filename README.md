@@ -4,7 +4,7 @@ A local AI studio with conversations, cooperating project-memory layers, file ed
 
 ## Download
 
-[Download Ghost 0.3.4 for Windows](https://github.com/Tboy450/ghost-ai-downloads/releases/tag/v0.3.4)
+[Download Ghost 0.3.5 for Windows](https://github.com/Tboy450/ghost-ai-downloads/releases/tag/v0.3.5)
 
 Download the ZIP and its `.sha256` file. This remains an **unsigned preview ZIP with a PowerShell installer**, not a signed EXE/MSIX.
 
@@ -17,6 +17,8 @@ Download the ZIP and its `.sha256` file. This remains an **unsigned preview ZIP 
 ## In this release
 
 Seven chat tools: current time, list/read/search project files, propose edits, propose new files, and list installed engines. File traversal and returned reads are bounded and say when results are incomplete. The dispatcher refuses tools outside the current offered set. Review a proposed diff and approve its exact write; applied edits keep checkpoints and offer **Undo** without overwriting later work. **Engines** detects installed software and records project enablement; this is separate from executing commands. Command execution remains pending and is not in this release.
+
+Explicit English search → read requests now track actual tool evidence. With a clear matching file, Ghost can complete one skipped bounded read within the existing tool allowance and feed that content into the answer. It withholds premature claims and reports unfinished work when a read is unavailable, ambiguous, partial or stopped. General multi-action planning and durable task resumption remain pending.
 
 Task mode is the default. **Debate** enables argument analysis. **Think** requests separate reasoning; when the model returns a trace it is expandable. Missing returned reasoning does not prove a lack of internal computation. The profile panel identifies actual model/application/memory facts; generated replies may still misdescribe them.
 
